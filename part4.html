@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="_hello_world.css">
+<title>Part 4</title>
+</head>
+<body>
+<p id="width"></p>
+<p id="height"></p>
+<p id="pixels"></p>
+
+<script>
+var width_para =document.getElementById("width");
+var width_of_window=window.innerWidth;
+width_para.innerHTML="The width is " + width_of_window + " pixels."
+
+var height_para =document.getElementById("height");
+var height_of_window=window.innerHeight;
+height_para.innerHTML="The height is " + height_of_window + " pixels."
+
+var pixels_para =document.getElementById("pixels");
+var pixels_on_screen=(width_of_window * height_of_window);
+pixels_para.innerHTML="The total number of pixels is " + pixels_on_screen + "."
+
+window.addEventListener("resize", windowWasResized);
+
+function windowWasResized() {
+
+  width_para = document.getElementById("width");
+  width_of_window = window.innerWidth;
+  width_para.innerHTML="The width is " + width_of_window + " pixels."
+  height_para =document.getElementById("height");
+  height_of_window=window.innerHeight;
+  height_para.innerHTML="The height is " + height_of_window + " pixels."
+  pixels_para =document.getElementById("pixels");
+  pixels_on_screen=(width_of_window * height_of_window);
+  pixels_para.innerHTML="The total number of pixels is " + pixels_on_screen + "."
+
+
+
+}
+
+</script>
+</body>
+</html>
