@@ -61,7 +61,7 @@ How many Lowes would Rob Lowe rob if Rob Lowe could rob Lowes?</p>
 function addtolist() {
 var mylistelement=document.getElementById("addlist");
 var newlistitem=document.createElement("li");
-newlistitem.innerHTML=document.getElementById(newlistitem);
+newlistitem.innerHTML=document.getElementById(colorHolder());
 mylistelement.appendChild(newlistitem);
 }
 
@@ -72,6 +72,10 @@ function changeToRandomColor(element) {
   document.getElementById('colorrgb').innerHTML=colorHolder;
 }
 
+function colorHolder() {
+  var colorHolderr=randomColor();
+  return colorHolderr
+}
 
 
 
