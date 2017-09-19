@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="five.css">
-<title>Part 5</title>
+<title>Part 5 Color Picker</title>
 <style>
   #randomColor {
     height : 150px;
@@ -58,12 +58,21 @@ How many Lowes would Rob Lowe rob if Rob Lowe could rob Lowes?</p>
 </div>
 <script>
 
+// function addtolist() {
+// var mylistelement=document.getElementById("addlist");
+// var newlistitem=document.createElement("li");
+// newlistitem.innerHTML=document.getElementById(colorHolder());
+// mylistelement.appendChild(newlistitem);
+// }
+
 function addtolist() {
 var mylistelement=document.getElementById("addlist");
 var newlistitem=document.createElement("li");
 console.log(document.getElementById("randomColor"))
 newlistitem.innerHTML=document.getElementById("randomColor").style.backgroundColor;
 console.log(newlistitem)
+newlistitem.innerHTML=document.getElementById("randomColor").style.backgroundColor;
+
 mylistelement.appendChild(newlistitem);
 }
 
