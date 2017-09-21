@@ -6,7 +6,6 @@
 </head>
 <body>
 <h2>Movie Ratings</h2>
-<p><b><u>I could not figure out how to do this properly.</u></b></p>
 <p>Goonies, <span class="rating">3 stars</span></p>
 <p>Predator, <span class="rating">2 stars</span></p>
 <p>Three Amigos, <span class="rating">1 stars</span></p>
@@ -15,12 +14,72 @@
 
 
 <script>
+// // var gon=document.getElementsByClassName('rating')[0];
+// // // var gonr= gon.split('');
+// // // var gonr=[];
+// // // gonr=gon.split();
+// // // // alert(gonr[0]);
+// // console.log("gon");
+// // console.log(gon);
+// // // console.log(gonr);
+// // // console.log(gon[3]);
+// //
+// // // console.log(gonr);
+// var starSpans = document.getElementsByClassName("rating");
+// for (var x = 0 ; x < starSpans.length ; x++) {
+//    convertTextToStars(starSpans[x]);
+//
+//
+// function convertTextToStars(element) {
+//   var text = element.innerHTML;
+//   console.log("The current text is " + text);
+//
+//   var firstChar = text[0];
+//
+//   var star = '\u2605';
+//
+//   var output = "";
+//
+//   for (var i=0; i < firstChar; i++) {
+//     output =+ star;
+//   }
+//   element.innerHTML=output;
 
-var goon=document.getElementsByClassName('rating')[0].innerHTML='\u2605'.repeat(3);
-var pred=document.getElementsByClassName('rating')[1].innerHTML='\u2605'.repeat(2);
-var three=document.getElementsByClassName('rating')[2].innerHTML='\u2605'.repeat(1);
-var disorder=document.getElementsByClassName('rating')[3].innerHTML='\u2605'.repeat(4);
-var big=document.getElementsByClassName('rating')[4].innerHTML='\u2605'.repeat(5);
+// var goon=document.getElementsByClassName('rating')[0].innerHTML='\u2605'.repeat(3);
+// var pred=document.getElementsByClassName('rating')[1].innerHTML='\u2605'.repeat(2);
+// var three=document.getElementsByClassName('rating')[2].innerHTML='\u2605'.repeat(1);
+// var disorder=document.getElementsByClassName('rating')[3].innerHTML='\u2605'.repeat(4);
+// var big=document.getElementsByClassName('rating')[4].innerHTML='\u2605'.repeat(5);
+
+var starSpans = document.getElementsByClassName("rating");
+for (var x = 0 ; x < starSpans.length ; x++) {
+   convertTextToStars(starSpans[x]);
+}
+
+function convertTextToStars(element) {
+
+  var text = element.innerHTML;
+  console.log("the current text is " + text);
+
+  var firstChar  = text[0];
+  console.log("The first character is " + text[0]); // Get first character from text string, which will be something like '4' or '5'
+  // A more robust solution would be to use regex pattern matching to remove all the digits from the start of the string. The current code doesn't work for "10 stars"
+
+  var star = "\u2605";   // Replace with a glyphicon or a ★
+     // <span class="glyphicon glyphicon-star"/> works too, if you add bootstrap to your page
+  var output = "";
+
+  // Loop 4 times for '4 stars' - JS will convert firstChar to a number
+  for (var s = 0 ; s < firstChar ; s++) {
+  	// add one star to output String
+    output += star;
+  }
+
+  // If firstChar is 4, output will be "****"
+
+  // Set this element's innerHTML to output
+  element.innerHTML = output;
+}
 
 </script>
 
