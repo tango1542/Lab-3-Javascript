@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="five.css">
+<!-- <link rel="stylesheet" href="five.css"> -->
 <title>Part 5 Color Picker</title>
 <style>
   #randomColor {
@@ -35,6 +35,38 @@
 #halp {
   font-size: 18pt;
 }
+#colorTable {
+    border: 1px solid black;
+}
+
+#th {
+    border: 1px solid black;
+}
+#tr {
+    border: 1px solid black;
+}
+#td {
+    border: 1px solid black;
+}
+#addlist
+{
+    border: 1px solid black;
+}
+#addlist2
+{
+    border: 1px solid black;
+}
+
+tr, th, td {
+    border: 1px solid black;
+}
+#colourss {
+  border:1px solid black;
+  height : 15px;
+  width : 25px;
+  margin: 1em;
+}
+}
 
 </style>
 </head>
@@ -53,8 +85,18 @@ How many Lowes would Rob Lowe rob if Rob Lowe could rob Lowes?</p>
 <h4>My Saved Colors</h4>
 <button onclick="addtolist()">Click Button to Save Color</button>
 <div>
-<ul id="addlist">
-</ul>
+<!-- <ul id="addlist">
+</ul> -->
+<table id = "colorTable" style = "width:30%">
+  <tr>
+    <th>RGB Value</th>
+    <th>Color Sample</th>
+  </tr>
+  <!-- <tr>
+  <td id="addlist"></td>
+  <td id="addlist2"><div id= "colourss"</div></td>
+  </tr> -->
+</table>
 </div>
 <script>
 
@@ -66,15 +108,30 @@ How many Lowes would Rob Lowe rob if Rob Lowe could rob Lowes?</p>
 // }
 
 function addtolist() {
-var mylistelement=document.getElementById("addlist");
-var newlistitem=document.createElement("li");
-console.log(document.getElementById("randomColor"))
-newlistitem.innerHTML=document.getElementById("randomColor").style.backgroundColor;
-console.log(newlistitem)
-newlistitem.innerHTML=document.getElementById("randomColor").style.backgroundColor;
+var table=document.getElementById("colorTable");  //used to by mylistelement instead of table
+var row = table.insertRow(0);
+var cell1 = row.insertCell(0);
+var cell2 = row.insertCell(1);
+cell1.innerHTML=document.getElementById("randomColor").style.backgroundColor;
+cell2.innerHTML=document.createElement("colours"); 
 
-mylistelement.appendChild(newlistitem);
+// var newlistitem=document.createElement("td");
+// var newlistitem2=document.createElement("td").style.backgroundColor;
+// newlistitem.innerHTML=document.getElementById("randomColor").style.backgroundColor;
+// newlistitem2.innerHTML=document.getElementById(colourss);
+
+// var mylistelement2=document.getElementById("addlist2");
+// var newlistitem2=document.createElement("tr");
+
+
+// table.appendChild(newlistitem);
+// mylistelement2.appendChild(colourss);
 }
+
+// function addToTable {
+//   var
+// }
+
 
 function changeToRandomColor(element) {
   var colorHolder= randomColor();

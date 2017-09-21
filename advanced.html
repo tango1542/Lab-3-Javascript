@@ -12,7 +12,6 @@
 
 <div>
   <b><i>The objective of this lab</i></b> <span class="copyme">is</span> to practice using <span class="copyme">javascript</span> <b class="large">selectors</b> to identify a specific element or a list of elements.</p>
-
   <p>Write a <b class="large">script</b> to make the following changes to this page. Don't change the HTML!</p>
 
   <ul>
@@ -72,18 +71,28 @@ var rev = function(string) {           //I got this from a Stack Overflow https:
 bb=rev(aa)  //Calling the above function
 document.getElementById("copyhere").innerHTML = bb;  //Writing to the copyhere id
 
-var dd = document.querySelectorAll("ul > li");  //  I was trying to get it to just select the 6th item in the list.  However, I couldn't understand how to pass that on to a get element by id, or something more specific.
-var hh=dd[5];
+// var dd = document.querySelectorAll("ul > li");  //  I was trying to get it to just select the 6th item in the list.  However, I couldn't understand how to pass that on to a get element by id, or something more specific.
+// var hh=dd[5];
+//
+// document.querySelector("ul").addEventListener("mouseover", myFunction); //Trying to get the mouseover function to work.  I could not get it to just do it when it is over the 6th item in the list.  Only the whole list.
+nn = document.getElementsByTagName('li');
+sixth_nn = nn[5];
+sixth_nn.addEventListener("mouseover", myFunction);
+sixth_nn.addEventListener("mouseout", myFunction2);
 
-document.querySelector("ul").addEventListener("mouseover", myFunction); //Trying to get the mouseover function to work.  I could not get it to just do it when it is over the 6th item in the list.  Only the whole list.
 
 function myFunction() {                     //This is the function to create the image.  I could only get it to create tons of images every time the mouse moved.  It seems like it needs to be created once, and then you could use the visible and hidden attributes.
     var ee = document.createElement("IMG");
+    ee.setAttribute("id", "doge")
     ee.setAttribute("src", "dog.jpg");
     ee.setAttribute("width", "200");
     ee.setAttribute("height", "133");
     ee.setAttribute("alt", "This old dog");
     document.body.appendChild(ee);
+}
+function myFunction2() {                                           //This link on stack overflow helped me to make the image go away.  You need to go to the parent node in order to remove the child node.  https://stackoverflow.com/questions/6802683/js-how-to-remove-image-with-javascript
+  var takeAway = document.getElementById("doge");
+  doge.parentNode.removeChild(doge);
 }
 // hh.onmouseover = function() {
 //   var ee = document.createElement("IMG");
