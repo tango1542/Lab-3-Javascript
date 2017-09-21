@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<p><strong>Essentials</strong></p>
+<p><em>For these pages, focus on the HTML and JavaScript. No need to add CSS/Bootstrap (unless you would like to). You can also write your JavaScript within your web pages.</em></p>
+<p><strong></strong><strong>Part 1:</strong> Create a web page with an empty unordered list, a input text box, and button. When the user types text into the input form and clicks the button, the text should be added to the list, as a new list element. When the text has been added to the unordered list, clear the text from the input.&nbsp;</p>
+<p><strong>Part 2:</strong> Start with the previous program, and add validation. Ignore the user input it if it is blank; and display an error message if it is too long - more than 50 characters. Use JavaScript.</p>
+<p><strong>Part 3:</strong> Create a page with names of a couple of movies and their ratings, as a number out of 5. Use a span or other tag to uniquely identify the numerical value of the rating. For example,</p>
+<pre>&lt;p&gt;Star Wars, &lt;span class="rating"&gt;4 stars&lt;/span&gt;&lt;/p&gt;<br /><br />&lt;p&gt;Back to the Future, &lt;span class="rating"&gt;5 stars&lt;/span&gt;&lt;/p&gt;</pre>
+<p>Write a script to convert the rating, in the class=rating elements, into the equivalent number of star icons. You can use a star glyphicon, or unicode characters (u2605 and u2606 for example, see unicode.html in the example repository), or download a small star image. So your page will look like something like this,</p>
+<pre>Star Wars, ★★★★<br /><br />Back to the Future, ★★★★★</pre>
+<p><strong>Part 4:</strong>&nbsp;Write JavaScript for a web page that includes an element that shows&nbsp;the current number of pixels visible in the browser window. You can calculate this by multiplying the screen width by the&nbsp;height. Update these values as the screen is resized. &nbsp;Hint: <a href="https://github.com/minneapolis-edu/week3-examples/blob/master/how_wide_is_this_window.html" target="_self">how_wide_is_this_window.html</a>&nbsp;in the example repo.</p>
+<p><strong>Part 5:</strong> Create a web page that lets the user generate random colors. The user should be able to&nbsp;save the colors that they like. For example, the user may&nbsp;be trying to select a color for text, and would like to see how random colors look as text.</p>
+<p>Create an element and JavaScript that generates random colors for another component. (Similar example, <a href="https://github.com/minneapolis-edu/week3-examples/blob/master/random-color.html" target="_self">random-color.html</a>). You should have a nice large component to display the randomly generated color (perhaps an example paragraph of text? or a div block with non-zero height and width?).</p>
+<p>Add a save button that adds a row for the current color to a&nbsp;table.</p>
+<p>The saved colors should be displayed in a table with two columns: one column with the background color, and one column for the HEX&nbsp;value of that color. &nbsp;</p>
+<p><em><strong>To submit:</strong> A zip file containing the HTML files for each of these sites. As always, make sure your files have descriptive names.&nbsp;OR push to GitHub and send a link to your repo.&nbsp;</em></p>
+<p></p>
+<p><strong>Advanced</strong></p>
+<p>Reading: JavaScript and JQuery, Chapter 5, the Document Object Model and Chapter 6, Events.</p>
+<p>Chapter 1-4 cover basic programming concepts in JavaScript. e.g loops, variables, conditionals etc. Review if you need a refresher on these concepts, and use as a reference.</p>
+<p><strong>Part 2:</strong>&nbsp; Start with this web page. <a href="https://github.com/minneapolis-edu/week3-examples/blob/master/lab3-part1.html">https://github.com/minneapolis-edu/week3-examples/blob/master/lab3-part1.html</a></p>
+<p>Add a JavaScript script to</p>
+<ul>
+<li>Count the number of &amp;ltp&amp;gt elements and display the number in the paragraph with id="p_count"</li>
+<li>Increase the font size of all &lt;b&gt;bold&lt;/b&gt; elements with class="large". Don't change any bold elements without this class.</li>
+<li>Use selectors to specifically identify &lt;i&gt;all&lt;/i&gt; italic text within <strong>unordered</strong> lists. Change this italic text to the color of your choice.</li>
+<li>Copy the text from all span elements with class="copyme". Sort it in reverse order, and concatenate all the strings together.</li>
+<li>Add a paragraph containing this information to the div tag with id="copyhere"&nbsp;</li>
+<li>Add a mouseover and mouseout listener to the 6th list element. Mousing over this element will cause an image of your choice to appear below the list, mouse out will remove it.</li>
+</ul>
+<p>Don't modify the HTML! The objective here is to practice using JavaScript selectors to identify elements and lists of elements.</p>
+<p><strong>Part 3</strong>: In Essentials Part 1 and Part 2, you used user input to build HTML elements. On this page, try entering some HTML characters in the input box. What happens? How could this cause problems for a website? What could&nbsp;you do to account for this?&nbsp;</p>
+<p>To start with, let's decide these characters are not allowed: &lt; &gt; &amp; " and '. (Greater than, less than, ampersand, double quote and single quote).</p>
+<p>Add a key listener that displays a warning message of some kind for the user if they type any of the banned characters in the text box. You can decide how annoying you want to be about this. (Examples: an alert box, a message displayed on the page, change the color of the input text box... or something else).</p>
+<p><em><strong>To submit:</strong>&nbsp;<em> zip file containing </em>the HTML files for each of these sites. Again, make sure your files have descriptive names. &nbsp;OR push to GitHub and send a link to your repo.&nbsp;</em></p>
+<p><em>&nbsp;</em></p>
+</body>
+</html>
